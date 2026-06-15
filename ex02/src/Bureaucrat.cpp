@@ -3,7 +3,7 @@
 
 Bureaucrat::Bureaucrat() : _name("Default"), _grade(150)
 {
-    std::cout << "Bureaucrat default constructor called" << std::endl;
+    //std::cout << "Bureaucrat default constructor called" << std::endl;
 }
 
 Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name)
@@ -13,7 +13,7 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name)
     else if (grade > 150)
         throw Bureaucrat::GradeTooLowException();
     _grade = grade;
-    std::cout << "Bureaucrat parameterized constructor called" << std::endl;
+    //std::cout << "Bureaucrat parameterized constructor called" << std::endl;
 }
 Bureaucrat::Bureaucrat(const Bureaucrat &other) : _name(other._name), _grade(other._grade)
 {
@@ -41,6 +41,19 @@ void Bureaucrat::signForm(AForm &form)
         return;
     }
     std::cout << this->getName() << " signed " << form.getName() << std::endl;
+}
+void Bureaucrat::executeForm(AForm const & form) const
+{
+    try
+    {
+        form.execute(*this);
+        std::cout << _name << " executed " << form.getName() << std::endl;
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << '\n';
+    }
+    
 }
 std::string Bureaucrat::getName() const
 {

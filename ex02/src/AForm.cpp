@@ -88,5 +88,5 @@ std::ostream &operator<<(std::ostream &os,  AForm const &AForm)
 }
 AForm::~AForm()
 {
-    //std::cout << "AForm destructor called" << std::endl;
+    std::cout << "AForm destructor called" << std::endl;
 }

@@ -7,6 +7,7 @@ int main()
     PresidentialPardonForm p("Diogo");
     Bureaucrat ze("ze",2);
     ze.signForm(p);
+    ze.executeForm(p);
     try
     {
         p.execute(ze);
