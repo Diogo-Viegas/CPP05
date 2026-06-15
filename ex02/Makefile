@@ -8,7 +8,7 @@ INC_DIR     = inc
 OBJ_DIR     = obj
 
 
-INFILES     = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp
+INFILES     = main.cpp Bureaucrat.cpp AForm.cpp PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 
 SRC_FILES   = $(addprefix $(SRC_DIR)/, $(INFILES))
 
