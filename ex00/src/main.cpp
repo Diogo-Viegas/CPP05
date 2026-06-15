@@ -55,7 +55,7 @@ int main(void)
         std::cout << b5;
         std::cout << "Incrementing grade of Eve:" << std::endl;
         b5.incrementGrade();
-        std::cout<< "Grade : " << b5.getGrade() << std::endl;
+        std::cout<< "Eve Grade : " << b5.getGrade() << std::endl;
     }
     catch (const std::exception &e)
     {
