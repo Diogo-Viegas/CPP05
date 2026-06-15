@@ -2,7 +2,7 @@
 #include "PresidentialPardonForm.hpp"
 
 
-PresidentialPardonForm::PresidentialPardonForm():AForm("PresidentialPardonForm",25,5)
+PresidentialPardonForm::PresidentialPardonForm():AForm("PresidentialPardonForm",25,5),_target("default target")
 {
 
 }
