@@ -41,6 +41,14 @@ int Form::getExecuteGrade()
 {
     return _gradeToExecute;
 }
+const char* Form::GradeTooHighException::what() const throw()
+{
+    return ("Grade too high!")
+}
+const char *Form::GradeTooLowException::what() const throw()
+{
+    return ("Grade too low!");
+}
 Form::~Form()
 {
     std::cout << "Form destructor called" << std::endl;
