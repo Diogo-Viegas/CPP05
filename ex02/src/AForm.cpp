@@ -57,6 +57,22 @@ void AForm::setIsSigned(bool is_signed)
 {
     _isSigned = is_signed;
 }
+void AForm::execute(Bureaucrat const & executor) const
+{
+    if(_isSigned == false)
+    {
+        throw IsNotSignedException();
+    }
+    if(_gradeToExecute < executor.getGrade())
+    {
+        throw GradeTooLowException();
+    }
+    run();
+}
+const char* AForm::IsNotSignedException::what() const throw()
+{
+    return ("The form is not signed!");
+}
 const char* AForm::GradeTooHighException::what() const throw()
 {
     return ("Grade too high!");

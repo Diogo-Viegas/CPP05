@@ -10,6 +10,7 @@ class AForm
         bool _isSigned;
         const int _gradeToSign;
         const int _gradeToExecute;
+        virtual void run() const = 0;
     public:
         AForm();
         AForm(const AForm& copy);
@@ -23,8 +24,14 @@ class AForm
         int getSignGrade() const;
         int getExecuteGrade() const;
         void setIsSigned(bool is_signed);
-        virtual void execute(Bureaucrat const & executor) const = 0;
+        virtual void execute(Bureaucrat const & executor) const;
         // Exceptions
+        class IsNotSignedException : public std::exception
+		{
+			public:
+				virtual const char *what() const throw();
+		};
+
 		class GradeTooHighException : public std::exception
 		{
 			public:

@@ -5,7 +5,7 @@ class  PresidentialPardonForm:public AForm
 {
     private:
         std::string _target;
-        void performAction() const;
+        void run() const;
     public:
         PresidentialPardonForm();
         PresidentialPardonForm(const std::string target);

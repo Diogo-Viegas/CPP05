@@ -4,6 +4,18 @@
 
 int main()
 {
+    PresidentialPardonForm p("Diogo");
+    Bureaucrat ze("ze",2);
+    ze.signForm(p);
+    try
+    {
+        p.execute(ze);
+    }
+    catch(const std::exception& e)
+    {
+        std::cerr << e.what() << std::endl;
+    }
+    
     
 
     return (0);
