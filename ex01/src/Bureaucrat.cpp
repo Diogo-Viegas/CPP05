@@ -1,4 +1,5 @@
-#include "Bureaucrat.hpp"
+#include "../inc/Bureaucrat.hpp"
+#include "../inc/Form.hpp"
 
 Bureaucrat::Bureaucrat() : _name("Default"), _grade(150)
 {
@@ -26,6 +27,20 @@ Bureaucrat &Bureaucrat::operator=(const Bureaucrat &other)
         _grade = other._grade;
     }
     return *this;
+}
+void Bureaucrat::signForm(Form &form)
+{
+    try
+    {
+       form.beSigned(*this);
+    }
+    catch(const std::exception& e)
+    {
+    
+        std::cout << this->getName() << "couldn't sign " << this->getName() << " because " << e.what() << std::endl;   
+        return;
+    }
+    std::cout << this->getName() << " signed " << form.getName() << std::endl;
 }
 std::string Bureaucrat::getName() const
 {
