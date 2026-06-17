@@ -25,14 +25,11 @@ RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &o
 
 void  RobotomyRequestForm::run() const
 {
+    std::cout << "* DRILLING NOISES (Brrrrrrrrrrrr!) *" << std::endl;
     if(rand() % 2)
         std::cout << "Bzzzzzzzt! " << _target << " has been robotomized!" << std::endl; 
     else
-        throw RobotizationFailed();
-}
-const char *RobotomyRequestForm::RobotizationFailed::what() const throw()
-{
-	return ("Robotomy failed :(");
+        std::cout << "Robotomy failed for " << _target << std::endl;
 }
 
 RobotomyRequestForm::~RobotomyRequestForm()
