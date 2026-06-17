@@ -89,7 +89,10 @@ std::cout << "=========================================================" << std:
        std::cout << "=========================================================" << std::endl;
     
     Intern i;
-    AForm newForm = i.makeForm("PresidentialPardonForm","hello");
+    AForm *newForm;
+    newForm = i.makeForm("PresidentialPardonForm","hello");
+    newForm = i.makeForm("RobotomyRequestForm","C3PO");
+    newForm = i.makeForm("ShrubberyCreationForm","forest");
 
     std::cout << "\n=========================================================" << std::endl;
     std::cout << "          END OF TESTING - CLEANING UP MEMORY            " << std::endl;
