@@ -37,7 +37,7 @@ AForm* Intern::makeForm(const std::string form_name, const std::string form_targ
             std::cout << "Intern creates " << form_name << std::endl;
             return (new ShrubberyCreationForm(form_target));
         default:
-            std::cout << "Form not found" << std::endl;
+            std::cout << "Error: Intern cannot create '" << form_name << "' because it doesn't exist." << std::endl;
             return (NULL);
 
     }

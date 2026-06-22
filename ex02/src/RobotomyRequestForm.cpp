@@ -12,9 +12,8 @@ RobotomyRequestForm::RobotomyRequestForm(const std::string target):AForm("Roboto
 {
 
 }
-RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &copy) : AForm(copy)
+RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &copy) : AForm(copy), _target(copy._target)
 {
-    *this = copy;
 };
 RobotomyRequestForm &RobotomyRequestForm::operator=(const RobotomyRequestForm &obj)
 {
