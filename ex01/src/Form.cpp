@@ -11,7 +11,7 @@ Form::Form(const std::string &name, int signGrade, int executeGrade) : _name(nam
         throw Form::GradeTooHighException();
     else if (signGrade > 150 || executeGrade > 150)
         throw Form::GradeTooLowException();
-    std::cout << "Form parameterized constructor called" << std::endl;
+    std::cout << BLUE "Form parameterized constructor called" RESET << std::endl;
 }
 Form::Form(const Form &other) : _name(other._name), _isSigned(other._isSigned), _gradeToSign(other._gradeToSign), _gradeToExecute(other._gradeToExecute)
 {
@@ -64,10 +64,10 @@ const char *Form::GradeTooLowException::what() const throw()
 }
 std::ostream &operator<<(std::ostream &os,  Form const &form)
 {
-    os << "Name: " << form.getName() << "\nSigned: " << form.getSigned() << "\nGrade to Sign: " << form.getSignGrade() << "\nGrade to Execute: " << form.getExecuteGrade() << std::endl;
+    os << GREEN "Name: " << form.getName() << "\nSigned: " << form.getSigned() << "\nGrade to Sign: " << form.getSignGrade() << "\nGrade to Execute: " << form.getExecuteGrade() << RESET<< std::endl;
     return (os); 
 }
 Form::~Form()
 {
-    std::cout << "Form destructor called" << std::endl;
+    std::cout << RED "Form destructor called" RESET << std::endl;
 }

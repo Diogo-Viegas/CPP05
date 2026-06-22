@@ -83,10 +83,10 @@ const char *AForm::GradeTooLowException::what() const throw()
 }
 std::ostream &operator<<(std::ostream &os,  AForm const &AForm)
 {
-    os << "Name: " << AForm.getName() << "\nSigned: " << AForm.getSigned() << "\nGrade to Sign: " << AForm.getSignGrade() << "\nGrade to Execute: " << AForm.getExecuteGrade() << std::endl;
+    os << GREEN "Name: " << AForm.getName() << "\nSigned: " << AForm.getSigned() << "\nGrade to Sign: " << AForm.getSignGrade() << "\nGrade to Execute: " << AForm.getExecuteGrade() << RESET<< std::endl;
     return (os); 
 }
 AForm::~AForm()
 {
-    std::cout << "AForm destructor called" << std::endl;
+    std::cout << RED "AForm destructor called" RESET<< std::endl;
 }

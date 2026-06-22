@@ -90,5 +90,5 @@ std::ostream &operator<<(std::ostream &os, Bureaucrat const &other)
 }
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Bureaucrat destructor called" << std::endl;
+    std::cout << RED "Bureaucrat destructor called" RESET << std::endl;
 }

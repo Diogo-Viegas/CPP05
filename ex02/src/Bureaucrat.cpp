@@ -46,8 +46,9 @@ void Bureaucrat::executeForm(AForm const & form) const
 {
     try
     {
-        form.execute(*this);
         std::cout << _name << " executed " << form.getName() << std::endl;
+        form.execute(*this);
+        
     }
     catch(const std::exception& e)
     {
@@ -90,5 +91,5 @@ std::ostream &operator<<(std::ostream &os, Bureaucrat const &other)
 }
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Bureaucrat destructor called" << std::endl;
+    std::cout << RED "Bureaucrat destructor called" RESET<< std::endl;
 }

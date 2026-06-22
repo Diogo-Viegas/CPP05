@@ -16,7 +16,7 @@ SRC_FILES   = $(addprefix $(SRC_DIR)/, $(INFILES))
 OBJFILES    = $(INFILES:%.cpp=$(OBJ_DIR)/%.o)
 
 
-NAME       = Form
+NAME       = Intern
 
 all: $(NAME)
 

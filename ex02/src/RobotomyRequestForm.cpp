@@ -26,7 +26,7 @@ void  RobotomyRequestForm::run() const
 {
     std::cout << "* DRILLING NOISES (Brrrrrrrrrrrr!) *" << std::endl;
     if(rand() % 2)
-        std::cout << "Bzzzzzzzt! " << _target << " has been robotomized!" << std::endl; 
+        std::cout << _target << " has been robotomized!" << std::endl; 
     else
         std::cout << "Robotomy failed for " << _target << std::endl;
 }

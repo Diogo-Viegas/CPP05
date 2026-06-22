@@ -13,7 +13,7 @@ Bureaucrat::Bureaucrat(const std::string &name, int grade) : _name(name)
     else if (grade > 150)
         throw Bureaucrat::GradeTooLowException();
     _grade = grade;
-    std::cout << "Bureaucrat parameterized constructor called" << std::endl;
+    std::cout << BLUE "Bureaucrat parameterized constructor called" RESET << std::endl;
 }
 Bureaucrat::Bureaucrat(const Bureaucrat &other) : _name(other._name), _grade(other._grade)
 {
@@ -77,5 +77,5 @@ std::ostream &operator<<(std::ostream &os, Bureaucrat const &other)
 }
 Bureaucrat::~Bureaucrat()
 {
-    std::cout << "Bureaucrat destructor called" << std::endl;
+    std::cout << RED "Bureaucrat destructor called" RESET << std::endl;
 }
